@@ -1,11 +1,7 @@
-# Misc Challenges
+# js-challenges
 
-## Introduction
+Check the branches on github, pull down the first one and go from there.
 
-A misc assortment of challenges from day 5 of javascript, from Sydney, covering some of the basic concepts of javascript.
+Remember to add and commit before switching branches. 
 
-## Specs
-
-Complete the challenges
-
-## Optional
+You can even merge your work into master.
