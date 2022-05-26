@@ -1,0 +1,139 @@
+// JS Drills
+
+// Sometimes you learn how to do things before you fully understand how they work. Coding is like this a lot. There are many things that I learned how to do well before I asked how they function. There are still plenty more things where that is the case for me. You merely push back that barrier slowly, but the unknown remains. In that vein, these are exercises that are designed to get you familiar with the lingo of arrays, objects, and functions, and get you repeatedly using them. It’s not a test, or even a challenge - it’s practice. Consider it like doing a forehand drill in tennis, or scales in music. You wouldn’t be upset making some mistakes while you practice, because you know that this is the thing you need to work toward being competent, and you allow yourself to fail and learn. This is exactly the same. 
+
+// Learn and fail as you need here, because the bigger tests are to come. As you get more comfortable with the basic syntax, and getting your code to work, you will have more brain space to think about what it is it all means. (And we are more than happy to keep explaining that at the same time too!)
+
+// Follow the instructions carefully. They will be repetitive and are not designed to be interesting, but rather build up ‘muscle memory’. *Each* line of code that you write, you *must* save the file and run the code. If there are *any* errors, you fix them then and there. If in doubt, puts out the structure you have made to make sure that it is what you hoped it was. I’m looking for accuracy - I want the instructions followed precisely. It will be your choice of class and variable names (etc), but the functioning and number of attributes called for are immutable. Ideally you’ll want the work to be checked, so copy and paste this text into a file and comment it out, so that I can check it easily - put the answer directly below the question.
+
+// 1. Make a function that takes two arguments, and returns the result of them added together.
+function add(a, b) {
+  return a + b
+}
+// 2. Call the above function four times with different inputs each time. Make at least some of the inputs floats.
+add(1, 2)
+add(3.6, 7)
+add(5, 8.3)
+add(5.3, 8)
+// 3. Define two integer and two float variables, and use them as arguments to this method you have made.
+const int1 = 5
+const int2 = 10
+const float1 = 2.3
+const float2 = 7.9
+
+add(int1, int2)
+add(int2, float1)
+add(float1, int2)
+add(float2, int1)
+// ============================================
+// 4. Make an object (in ruby this would be a hash) with four keys, and have the keys be three different data types.
+const person = {
+  name: "Nik",
+  age: 25,
+  city: "Melbourne",
+  pets: [
+    "dog",
+    "cat"
+  ]
+}
+// 5. Access two of the values in your object, and log them to the screen.
+console.log(person.name)
+console.log(person.pets)
+// ============================================
+// 6. Create another object with one key and value pair.
+const object = {
+  shape: "Triangle"
+}
+// 7. Define a function that takes that type of object as the input, and log out the value of that key.
+function func(object) {
+  console.log(object.shape)
+} 
+
+func(object)
+// ============================================
+// 8. Make an object with three keys and values, and assign it to a variable.
+const obj1 = {
+  name: "Kenny",
+  age: "10",
+  city: "South Park"
+}
+// 9. Make four more objects with the same keys.
+const obj2 = {
+  name: "Stan",
+  age: "11",
+  city: "South Park"
+}
+const obj3 = {
+  name: "Kyle",
+  age: "12",
+  city: "South Park"
+}
+const obj4 = {
+  name: "Cartman",
+  age: "13",
+  city: "South Park"
+}
+const obj5 = {
+  name: "Randy",
+  age: "35",
+  city: "South Park"
+}
+// 10. Access a value from three of these objects.
+console.log(obj1.name)
+console.log(obj2.name)
+console.log(obj3.name)
+// ============================================
+// 11. Define a variable and assign to it an empty array.
+const arr = []
+// 12. Define a function that takes an array and an object as arguments. The function will push the object into the given array.
+function arrayMaker(array, object) {
+  array.push(object)
+}
+// 13. Using the function, the four objects, and the array that you have made in the previous steps, invoke the function four times to put those four objects into the array.
+arrayMaker(arr, obj1)
+arrayMaker(arr, obj2)
+arrayMaker(arr, obj3)
+arrayMaker(arr, obj4)
+// 14. Make sure that the array contains four hashes (maybe log to the screen).
+console.log(arr)
+// 15. Access two elements of the array that you have created (via an index)
+const spOne = arr[0]
+const spTwo = arr[1]
+// 16. For one of these, now access one of the values of the object at that is located at that index.
+console.log(spOne.name)
+// ============================================
+// 17. Write a function that takes two arguments - one an object, and the other an array. Inside the function log out a value from the object, and an element from the array.
+function hello(array, object) {
+  console.log(`${array[0]}, ${Object.values(object)[0]}`)
+}
+// 18. Define four objects, one with one key, one with two keys, one with three keys, and one with four. Make the first key consistent across these objects.
+const object1 = {
+  name: "Stan",
+}
+const object2 = {
+  name: "Kyle",
+  age: "12",
+}
+const object3 = {
+  name: "Cartman",
+  age: "13",
+  city: "South Park"
+}
+const object4 = {
+  name: "Randy",
+  age: "35",
+  city: "South Park",
+  alias: "Lorde"
+}
+// 19. Define two different arrays, with two different datatypes.
+const array1 = [1, 2, 3, 4]
+const array2 = ["Hello", "World"]
+// 20. Call the function four times, once with each object, and use the arrays you made.
+hello(array1, object1)
+hello(array2, object2)
+hello(array1, object3)
+hello(array2, object4)
+// ============================================
+// 21. Write a function that takes five arguments: three strings, and two numbers.
+
+// 22. Call that function three times.

@@ -1,0 +1,112 @@
+// The next set of drills are a bit more difficult. I know that sometimes it might be hard to work out what is meant by the question, but I ask that you stay with it and do your best to piece it apart - sometimes it is hard to express these questions without some confusion. I am happy to give answers to some of the questions if that will help with the understanding so that you can move forward. Where a question asks for a log to screen, the simplest thing will be to log the name of the function. Most times in these questions it is not what the function does that will be important, but rather how that function sits within the object, or even within the other function.
+
+// 1. Define an object that has two keys. One will have the value of a string, and the other a function (and this function can simply log its own name to screen).
+const object = {
+  name: "Nik",
+  age: (a, b) => a + b
+}
+// 2. Log the string to screen.
+console.log(object.name)
+// 3. Log the entire function to screen.
+console.log(object.age)
+// 4. Invoke the function within the object. 
+console.log(object.age(9, 10))
+// ============================================
+// 5. Define an object that has three keys, and each key has the value of an anonymous function. In each function log something to screen (different in each function).
+const object2 = {
+  key1: () => console.log("Hey"),
+  key2: () => console.log("Now"),
+  key3: () => console.log("Brown Cow")
+}
+// 6. Call each function (through the object).
+object2.key1()
+object2.key2()
+object2.key3()
+// ============================================
+// 7. Make a function that returns an object that has two keys, one key with a string value, and the other that has an anonymous function as its value.
+const object3 = {
+  key1: "Mary had a little lamb",
+  key2: (a, b) => a * b 
+}
+
+function apple() {
+  return object3
+}
+// 8. Log to screen the result of invoking this function.
+console.log(apple())
+// 9. Work out how to log to screen the value of the returned object’s string.
+console.log(apple().key1)
+// 10. Invoke the returned object’s function (via the first function - you will need to return the object, and then call the function within the returned object). 
+console.log(apple().key2(2,4))
+// ============================================
+// 11. Write a function that takes a number and a function as an argument. Inside this function perform three simple calculations with the given number (the first argument), 
+// and then pass the final result to the function that is passed as the second argument.
+function pear(num, func) {
+  let a = num + 1 * 2 / 3
+  func(a)
+}
+// 12. Call this function three times with different numbers, and a different anonymous callback function each time (perhaps each time the callback doing a different simple 
+// calculation).
+const a = (function(num) {
+  return console.log(num + 1)
+})
+
+const b = (function(num) {
+  return console.log(num / 2)
+})
+
+const c = (function(num) {
+  return console.log(num - 5)
+})
+
+pear(1, a)
+pear(2, b)
+pear(3, c)
+// 13. Now write two functions that take a number as an argument, and do some very simple calculation.
+function multThree(num) {
+  return num * 3
+}
+
+function multSix(num) {
+  return num * 6
+}
+// 14. Invoke the function from 11 twice, each time with a different number argument, and using each of the two functions that you just defined in 13 (one in each invocation). 
+pear(4, multThree)
+pear(5, multSix)
+// ============================================
+// 15. Define three very basic functions that take no arguments and that simply console out the name of the function.
+const one = function harry() {
+  console.log("Potter")
+}
+
+const two = function ron() {
+  console.log("Weasley")
+}
+
+const three = function hermione() {
+  console.log("Granger")
+}
+// 16. Place each of these functions into an array (do not call the functions).
+const arr = [one, two, three]
+// 17. Loop through this array and invoke each of the functions in turn.
+arr.forEach(function(element) {
+  element()
+})
+// ============================================
+// 18. Define a function (funcReturnsFunc) that returns an anonymous function. If you like you can have funcReturnsFunc log out something before it returns the function. The 
+// returned function can just log out a simple message to inform you it ran. 
+function d() {
+  console.log('D');
+}
+
+function funcReturnsFunc(){
+  return d()
+}
+
+// 19. Invoke funcReturnsFunc, and store the result in a const.
+const happy = funcReturnsFunc()
+
+// 20. Using that const, run the returned function.
+happy
+// 21. Now do the same thing in one line: run funcReturnsFunc, and then run the anonymous function that results immediately.
+funcReturnsFunc()
