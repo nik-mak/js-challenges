@@ -36,3 +36,25 @@ console.log(simba.roar());
 // export const fruitClass = () => {
 //     // Your code here
 // };
+
+function Mammal(name) {
+  this.hair = true
+  this.warmblooded = true
+}
+
+Mammal.prototype.breath = function() {
+  console.log("I love H2O")
+}
+
+Mammal.prototype.speak = function(input) {
+  return `I am a ${input}`
+}
+
+function Lion(name) {
+  Mammal.call(this, name)
+  this.type = "Lion"
+}
+
+Lion.prototype.roar() = function() {
+  return super.speak(this.type) + "! Here me ROAR!"
+}
