@@ -55,6 +55,8 @@ function Lion(name) {
   this.type = "Lion"
 }
 
+Lion.prototype = Object.create(Mammal.prototype)
+
 Lion.prototype.roar() = function() {
   return super.speak(this.type) + "! Here me ROAR!"
 }
